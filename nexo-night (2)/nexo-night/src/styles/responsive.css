@@ -1,0 +1,28 @@
+/* Mobile-first collapse of the desktop shell. */
+@media (max-width: 900px) {
+  :root { --sidebar-w: 0px; }
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--header-h) 1fr auto;
+    grid-template-areas: "header" "main" "sidebar";
+  }
+  .app-sidebar {
+    position: sticky; bottom: 0; z-index: 30;
+    display: flex; overflow-x: auto; gap: 8px;
+    padding: 8px !important; border-top: 1px solid var(--glass-border-soft);
+    background: rgba(8,4,16,.92); backdrop-filter: blur(12px);
+  }
+  .app-sidebar .nav-labels { display: none; }
+  .app-sidebar .sidebar-extra { display: none; }
+  .app-main { padding: 14px; }
+  .home-grid { grid-template-columns: 1fr !important; }
+  .home-hero { min-height: 360px !important; }
+  .modes-row { grid-template-columns: 1fr 1fr !important; }
+}
+
+@media (max-width: 560px) {
+  .currency-bar { gap: 8px !important; }
+  .currency-bar .cur-label { display: none; }
+  .modes-row { grid-template-columns: 1fr !important; }
+  .hero-title { font-size: 54px !important; }
+}

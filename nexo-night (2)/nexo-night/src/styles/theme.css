@@ -1,0 +1,42 @@
+/* NEXO NIGHT — design tokens
+   Palette derived from the reference: deep violet-black canvas, hot magenta,
+   electric indigo, cyan accents, glass panels with glowing hairline borders. */
+:root {
+  /* canvas */
+  --bg-0: #06040c;
+  --bg-1: #0a0512;
+  --bg-2: #120a22;
+  --panel: rgba(24, 14, 42, 0.55);
+  --panel-2: rgba(35, 20, 58, 0.65);
+  --glass-border: rgba(255, 61, 139, 0.25);
+  --glass-border-soft: rgba(140, 100, 255, 0.18);
+
+  /* neon */
+  --pink: #ff3d8b;
+  --pink-hot: #ff2d92;
+  --magenta: #ff5cc8;
+  --violet: #7b5bff;
+  --indigo: #5b6bff;
+  --cyan: #3fd0ff;
+  --gold: #ffb43d;
+  --green: #35e08e;
+
+  /* text */
+  --text: #f5edff;
+  --text-dim: #b9a8d6;
+  --text-mute: #7c6ba0;
+
+  /* effects */
+  --glow-pink: 0 0 18px rgba(255, 61, 139, 0.55);
+  --glow-violet: 0 0 20px rgba(123, 91, 255, 0.5);
+  --glow-cyan: 0 0 18px rgba(63, 208, 255, 0.5);
+
+  --radius: 16px;
+  --radius-sm: 11px;
+
+  --font-display: 'Orbitron', 'Rajdhani', system-ui, sans-serif;
+  --font-body: 'Rajdhani', 'Segoe UI', system-ui, sans-serif;
+
+  --sidebar-w: 236px;
+  --header-h: 78px;
+}

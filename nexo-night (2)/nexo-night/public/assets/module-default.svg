@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="m" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff3d8b"/>
+      <stop offset="1" stop-color="#7b5bff"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="#120a22"/>
+  <rect width="400" height="240" fill="url(#m)" opacity="0.14"/>
+  <circle cx="200" cy="110" r="46" fill="none" stroke="url(#m)" stroke-width="3" opacity="0.9"/>
+  <path d="M200 92 l6 12 13 2 -9 9 2 13 -12 -6 -12 6 2 -13 -9 -9 13 -2z" fill="#ff5cc8"/>
+  <text x="200" y="200" text-anchor="middle" font-family="Orbitron, sans-serif" font-size="16" fill="#b9a8d6" letter-spacing="3">NEXO NIGHT</text>
+</svg>
