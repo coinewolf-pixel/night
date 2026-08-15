@@ -1,5 +1,14 @@
+# Cloudflare (Workers Static Assets) deploy config.
+# `wrangler deploy` runs [build].command FIRST, which creates ./dist,
+# then uploads the static assets. This works even if the dashboard
+# "Build command" field is left empty.
 name = "nexo-night"
-compatibility_date = "2026-08-15"
+compatibility_date = "2025-06-01"
 
-[site]
-bucket = "./dist"
+[build]
+command = "npm install && npm run build"
+
+[assets]
+directory = "./dist"
+# Serve index.html for unknown routes so /play, /admin, … survive a refresh.
+not_found_handling = "single-page-application"
