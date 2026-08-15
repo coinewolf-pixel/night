@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #050510;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #7c3aed #0a0a1a;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0a0a1a;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #7c3aed;
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+  }
+
+  .glass-panel-strong {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+  }
+
+  .neon-border {
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.3), 
+                0 0 20px rgba(124, 58, 237, 0.2),
+                inset 0 0 20px rgba(236, 72, 153, 0.05);
+    border: 1px solid rgba(236, 72, 153, 0.3);
+  }
+
+  .neon-border-blue {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 
+                0 0 20px rgba(6, 182, 212, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.8),
+                 0 0 20px rgba(124, 58, 237, 0.6);
+  }
+
+  .neon-text-blue {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8),
+                 0 0 20px rgba(6, 182, 212, 0.6);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #ec4899 0%, #7c3aed 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(236, 72, 153, 0.6);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(236, 72, 153, 0.3);
+  }
+
+  .card-flip {
+    perspective: 1000px;
+  }
+
+  .card-flip-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .card-flip.flipped .card-flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+  }
+
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ec4899;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particle-float 3s ease-in-out infinite;
+  }
+
+  @keyframes particle-float {
+    0%, 100% { 
+      transform: translateY(0) scale(1); 
+      opacity: 0.6; 
+    }
+    50% { 
+      transform: translateY(-30px) scale(1.5); 
+      opacity: 1; 
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.1) 50%,
+      rgba(255,255,255,0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .level-up-animation {
+    animation: levelUp 1s ease-out;
+  }
+
+  @keyframes levelUp {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); filter: brightness(2); }
+    100% { transform: scale(1); }
+  }
+
+  .strip-animation {
+    animation: stripPulse 0.5s ease-in-out;
+  }
+
+  @keyframes stripPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; filter: hue-rotate(90deg); }
+  }
+}

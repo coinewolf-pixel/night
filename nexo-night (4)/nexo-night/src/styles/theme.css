@@ -1,0 +1,28 @@
+/* NEXO NIGHT Theme Variables */
+:root {
+  --nexo-bg: #050510;
+  --nexo-surface: rgba(255, 255, 255, 0.03);
+  --nexo-surface-hover: rgba(255, 255, 255, 0.06);
+  --nexo-border: rgba(255, 255, 255, 0.08);
+  --nexo-border-hover: rgba(255, 255, 255, 0.15);
+  --nexo-pink: #ec4899;
+  --nexo-purple: #7c3aed;
+  --nexo-blue: #3b82f6;
+  --nexo-cyan: #06b6d4;
+  --nexo-gold: #fbbf24;
+  --nexo-success: #10b981;
+  --nexo-danger: #ef4444;
+  --nexo-warning: #f59e0b;
+}
+
+.theme-neon-club {
+  --bg-gradient: linear-gradient(180deg, #0a0a1a 0%, #1a0a2e 50%, #0a0a1a 100%);
+}
+
+.theme-dark-lounge {
+  --bg-gradient: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+}
+
+.theme-cyber-city {
+  --bg-gradient: linear-gradient(180deg, #0a0a1a 0%, #0a1a2e 50%, #0a0a1a 100%);
+}
