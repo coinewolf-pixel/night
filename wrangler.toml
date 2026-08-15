@@ -1,0 +1,5 @@
+name = "nexo-night"
+compatibility_date = "2026-08-15"
+
+[site]
+bucket = "./dist"
